@@ -2,13 +2,15 @@ import React from "react";
 import RightSidebar from "../components/RightSidebar";
 import Search from "../components/Search";
 import StatData from "../components/StatData";
-
-
+import BarChartContainer from "../components/BarChartContainer";
+import ProgressBarContainer from "../components/ProgressBarContainer/ProgressBarContainer";
+import LineChartContainer from "../components/LineChartContainer";
+import ByGender from "../components/ByGender";
 
 
 const Dashboard = () => {
   return (
-    <div className="flex flex-grow">
+    <div className="flex flex-grow overflow-y-auto">
       <div className="flex flex-col mb-4 flex-grow px-4 relative">
         <Search />
         <div className="relative flex">
@@ -19,6 +21,15 @@ const Dashboard = () => {
            <StatData title="Shorlisted Candidates" value="201" primary="#E7B860" secondary="#E0EDEA" mainPercentage="74" secondaryPercentage="45"/>
            <StatData title="Rejected Candidates" value="160" primary="#FF6A49" secondary="#E0EDEA" mainPercentage="74" secondaryPercentage="40"/>
     
+        </div>
+
+        <div className="flex">
+           <BarChartContainer/>
+           <ProgressBarContainer/>
+        </div>
+        <div className="flex h-52">
+          <LineChartContainer/>
+          <ByGender mainPercentage={70}/>
         </div>
       </div>
 

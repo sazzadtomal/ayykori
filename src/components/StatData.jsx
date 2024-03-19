@@ -26,7 +26,7 @@ const StatData = ({title,value,primary,secondary,mainPercentage, secondaryPercen
         afterDatasetsDraw(chart) {
           const { ctx } = chart;
           const centerX = chart.getDatasetMeta(0).data[0].x;
-          const centerY = chart.getDatasetMeta(0).data[0].y+4;
+          const centerY = chart.getDatasetMeta(0).data[0].y;
       
           ctx.save();
           ctx.font = "bold 12px sans-serif";
